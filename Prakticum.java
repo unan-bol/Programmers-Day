@@ -13,13 +13,13 @@ public class Praktikum {
             }else {
                 System.out.println("12.09.000" + year);
         }
-        if (year < 100)
+        else if (year < 100)
             if (isLeapYear(year)) {
                 System.out.println("13.09.00" + year);
             }else {
                 System.out.println("12.09.00" + year);
             }
-        if (year < 1000)
+        else if (year < 1000)
             if (isLeapYear(year)) {
                 System.out.println("13.09.0" + year);
             }else {
@@ -34,18 +34,16 @@ public class Praktikum {
     }
 
     public static boolean isLeapYear(int year) {
-        boolean leapYear;// здесь нужно определить, является ли переданный год високосным
         if (year%400 == 0) {
-            leapYear = true;
+            return true;
         }else if(year%100 == 0){
-            leapYear = false;
+            return false;
         }
         else if (year%4 == 0){
-            leapYear = true;
+            return true;
         }
         else{
-            leapYear = false;
+            return false;
         }
-    return leapYear;
     }
 }
