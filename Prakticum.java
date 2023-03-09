@@ -7,11 +7,30 @@ public class Praktikum {
         System.out.println("Введите год:");
         int year = scanner.nextInt();
 
-        if (isLeapYear(year)) {
-            System.out.println("13.09." + year);
-        }else {
-            System.out.println("12.09." + year);
+        if (year < 10)
+            if (isLeapYear(year)) {
+                System.out.println("13.09.000" + year);
+            }else {
+                System.out.println("12.09.000" + year);
         }
+        if (year < 100)
+            if (isLeapYear(year)) {
+                System.out.println("13.09.00" + year);
+            }else {
+                System.out.println("12.09.00" + year);
+            }
+        if (year < 1000)
+            if (isLeapYear(year)) {
+                System.out.println("13.09.0" + year);
+            }else {
+                System.out.println("12.09.0" + year);
+            }
+        else
+            if (isLeapYear(year)) {
+                System.out.println("13.09." + year);
+            }else {
+                System.out.println("12.09." + year);
+            }
     }
 
     public static boolean isLeapYear(int year) {
